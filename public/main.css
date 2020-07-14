@@ -1,0 +1,42 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+
+.chessboard {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	height: 800px;
+	width: 800px;
+
+	position: relative;
+}
+
+.tile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.white-tile {
+	background: #F0DAB5;
+}
+
+.black-tile {
+	background: #CCA683;
+}
+
+.piece {
+	background: url("chess_pieces.svg");
+	display: inline-block;
+  height: 45px;
+  width: 45px;
+  transform-origin: top left;
+  transition: all 0.5s ease-in-out; 
+
+  position: absolute;
+}
+
+.test {
+	top: 400px !important;
+}
