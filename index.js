@@ -11,6 +11,10 @@ const publicPath = path.join(__dirname, "public")
 app.use(express.static(publicPath))
 app.use(webpackMiddleware(webpack(webpackConfig)))
 
+app.get('/', (req, res) => {
+	res.sendFile(path.join(__dirname, "src/views/home.html"))
+})
+
 app.get('/chess', (req, res) => {
 	res.sendFile(path.join(__dirname, "src/views/chess.html"))
 })
